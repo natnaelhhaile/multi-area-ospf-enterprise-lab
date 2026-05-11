@@ -80,6 +80,8 @@ To control OSPF adjacency behavior, router priorities were manually adjusted:
 - R3: Priority 250 → DR
 - R2: Priority 200 → BDR
 
+<img width="796" height="164" alt="image" src="https://github.com/user-attachments/assets/16be0aa3-953b-48f8-b93f-e2b533cca468" />
+
 After configuration, the OSPF process was reset to force re-election:
 
 ```bash

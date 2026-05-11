@@ -1,10 +1,10 @@
-# Multi-Area OSPF Enterprise Routing Lab (with NAT/PAT, Stub, and NSSA)
+# Multi-Area OSPF Enterprise Routing Lab
 
 ## Overview
 
 This project demonstrates the design and implementation of a complex enterprise routing topology using OSPFv2 as the Interior Gateway Protocol (IGP), combined with NAT/PAT for external connectivity simulation.
 
-The lab focuses on:
+**The lab focuses on**:
 
 - Multi-area OSPF hierarchical design
 - DR/BDR election manipulation in Area 0
@@ -16,7 +16,7 @@ The lab focuses on:
 
 This topology simulates a realistic enterprise network with internal segmentation and controlled external access.
 
-Key Technical Challenges Solved:
+**Key Technical Challenges Solved**:
 
 - Packet Tracer Limitation Workarounds: Successfully transitioned from a Point-to-Multipoint (P2MP) Non-Broadcast design to a Broadcast Multi-Access design on Ethernet segments to ensure stable adjacencies within the simulation environment.
 
@@ -43,7 +43,7 @@ The network is segmented into multiple OSPF areas:
 
 📌 Topology Diagram:
 
-*(Insert topology screenshot here)*
+<img width="1066" height="745" alt="01-network-topology" src="https://github.com/user-attachments/assets/08f1224b-ce86-4af9-988a-da148490189b" />
 
 ---
 

@@ -1,0 +1,14 @@
+Symptom: 
+OSPF neighbors in Area 3 (R3, R9, R10) were stuck in '2-WAY/DROTHER' state.
+
+Analysis:
+In a Broadcast network, routers only reach 'FULL' state with the DR and BDR. 
+Because the 'Wait' timer was set to 80s (due to doubled timers) and the 
+OSPF election is non-preemptive, no router was claiming the DR role. R3 remained in 'WAITING' while claiming the DR title 
+while neighbors didn't see it as a leader.
+
+Resolution:
+1. Confirmed that the Hello & Dead intervals and MTU attributes matched b/n all routers in the area.
+2. Performed a 'clear ip ospf process' on all Area 3 routers.
+3. Cycled the interface on R3 and waited for the 80s 'Wait' timer to expire 
+   before bringing up R9/R10, ending up with R10 & R9 as DR & BDR, respectively, accordingly with their router IDs.

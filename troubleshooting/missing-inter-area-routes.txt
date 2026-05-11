@@ -1,0 +1,13 @@
+Symptom: 
+Neighbor adjacency was 'FULL', but 'show ip route ospf' on R9 returned zero results.
+
+Analysis:
+The ABR (R3) was configured with the 'area 3 stub' flag, but R9/R10 were 
+still configured as 'Normal' areas. In OSPF, the Stub flag (E-bit) must 
+match in the Hello packets for Database Description (DBD) packets to 
+be exchanged.
+
+Resolution:
+Applied the 'area 3 stub' command to the OSPF process on R9 and R10. Once 
+the area types matched, the LSDB synchronized and the ABR injected the 
+default route (O*IA 0.0.0.0/0).

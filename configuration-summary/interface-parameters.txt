@@ -1,0 +1,12 @@
+Interface: GigabitEthernet 0/2 (R3 facing Area 3)
+- Network Type: BROADCAST (Default restored from P2MP)
+    - Area 3 uses Broadcast mode because Packet Tracer 8.2.2 does not support the P2MP Non-Broadcast sub-type. To maintain the 'Hub' design, R3 priority was set to 255.
+- Priority: 0 (Ensures R3 is elected as Designated Router)
+- Hello Interval: 20 seconds (Doubled for stability)
+- Dead Interval: 80 seconds (Doubled for stability)
+
+Interface: GigabitEthernet 0/1 (R9 & R10)
+- Network Type: BROADCAST
+- Priority: 1
+- Hello Interval: 20 seconds
+- Dead Interval: 80 seconds

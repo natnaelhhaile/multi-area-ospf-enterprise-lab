@@ -1,0 +1,12 @@
+# For Area 3
+# To verify the DR/BDR election and timers on R3:
+show ip ospf interface g0/2
+
+# To verify that the Stub area is blocking external routes:
+show ip route ospf
+
+# To verify Area 3 neighbors are in FULL state:
+show ip ospf neighbor
+
+# To check the LSA database for Area 3:
+show ip ospf database

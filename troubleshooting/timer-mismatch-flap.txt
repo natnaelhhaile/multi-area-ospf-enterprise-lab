@@ -1,0 +1,11 @@
+Symptom: 
+Adjacency would briefly reach 'INIT' or 'EXSTART' and then drop back to 'DOWN'.
+
+Analysis:
+R3 was configured with 'Hello 20 / Dead 80' to meet lab requirements, but 
+R9/R10 were still using the default 'Hello 10 / Dead 40'. OSPF requires 
+an exact match of these timers to form a stable adjacency.
+
+Resolution:
+Modified the Gigabit interface properties on R9 and R10 to match R3's 
+doubled timers. Verified stability using 'show ip ospf interface'.

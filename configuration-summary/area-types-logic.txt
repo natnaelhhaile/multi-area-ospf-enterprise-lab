@@ -1,0 +1,11 @@
+Area 3: STUB
+- Configuration: 'area 3 stub' applied to R3, R9, R10.
+- Logic: Blocks Type 5 LSAs (External). R3 automatically generates a 
+  Default Route (Type 3 LSA) to ensure R9/R10 can reach the internet/backbone
+  without maintaining a bunch of external routes.
+
+Area 51: TOTALLY NSSA (Not-So-Stubby Area)
+- Configuration: 'area 51 nssa no-summary' on ABR.
+- Logic: Allows R5 to inject external routes into the area as Type 7 LSAs, 
+  which the ABRs translate to Type 5 for the backbone. "No-summary" blocks
+  all Inter-Area routes, replacing them with a single default route.

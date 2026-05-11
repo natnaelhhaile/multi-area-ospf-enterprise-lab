@@ -1,0 +1,12 @@
+OSPF Process ID: 1
+Router ID Strategy: Loopback address (e.g., R3 = 3.3.3.3)
+
+Area Assignments:
+- Area 0 (Backbone): 20.20.20.0/24, 192.168.1.0/24
+- Area 2: 192.168.6.0/24
+- Area 3: 192.168.3.0/24 (Subnet for R3, R9, R10)
+- Area 51: 192.168.5.0/24, 172.16.1.0/24
+
+Role Assignments:
+- ABRs: R1, R2, R3, R4, R7
+- ASBR: R5 (Injecting external routes via redistribution)
